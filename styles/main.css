@@ -225,6 +225,12 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
+.btn.prevMonth:focus,
+.btn.nextMonth:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 @media (max-width: 768px) {
     .calender-window {
         width: 400px;
