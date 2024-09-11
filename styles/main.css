@@ -153,12 +153,12 @@
     }
 }
 
-.sales-chart {
+.sales-chart,
+.payments-chart {
     height: 80%;
 }
 
-.customers-chart,
-.payments-chart {
+.customers-chart {
     height: 90%;
 }
 
@@ -214,7 +214,6 @@
 .payments-tip span.unpaid {
     background-color: #725CFF;
 }
-
 
 @media (min-width: 1600px) {
     .recommend-title {
@@ -410,10 +409,5 @@
 
 .notification-btn:hover,
 .notification-btn:hover > i {
-    color: #ff3a54 !important;
-}
-
-.all-notifications:hover,
-.all-notifications:hover > i {
     color: #ff3a54 !important;
 }
