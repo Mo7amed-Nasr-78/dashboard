@@ -120,6 +120,10 @@
     .custom-card {
         padding: 25px 35px !important;
     }
+    
+    .card-title {
+        font-size: 22px !important;
+    }
 }
 
 @media (max-width: 576px) {
