@@ -209,6 +209,11 @@
     padding: 15px 20px;
 }
 
+@media (max-width: 1600px) {
+    .custom-card {
+        padding: 20px 30px;
+    }
+}
 
 @media (max-width: 576px) {
     .custom-card {
@@ -280,6 +285,12 @@
     background-color: var(--white_color);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     padding: 10px 20px;
+}
+
+@media (max-width: 1600px) {
+    .chart-card {
+        padding: 20px 30px;
+    }
 }
 
 .sales-chart {
@@ -404,8 +415,8 @@
 /* Calender Styles */
 .calender-window {
     width: 550px;
-    border-radius: var(--radius_20);
     z-index: 10;
+    border-radius: var(--radius_20);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     display: none;
 }
