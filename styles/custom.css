@@ -1,0 +1,161 @@
+/* Colors */
+
+/* this original color */
+
+/* .light-color {
+    color: #4E4E4E !important;
+} */
+
+/* for test */
+.light-color {
+    color: #3a3a3a !important;
+}
+
+/* .light-color-2 {
+    color: rgba(100, 100, 100, 0.9) !important;
+} */
+
+/* for test */
+.light-color-2 {
+    color: rgba(37, 36, 34, 0.9)
+}
+
+.dark-color {
+    color: #090B12 !important;
+}
+
+.dark-color-2 {
+    color: #18120F !important;
+}
+
+.accent-color {
+    color: #ff3a54 !important;
+}
+
+/* background */
+.bg-pearl {
+    background-color: #ffeeee;
+}
+
+.bg-vista-white {
+    background-color: #FAF9F6;
+}
+
+/* transitions */
+.transition-03 {
+    transition: all 0.3s ease;
+}
+
+.transition-05 {
+    transition: all 0.5s ease;
+}
+
+/* radius */
+.radius-10 {
+    border-radius: 10px;
+}
+
+.radius-15 {
+    border-radius: 15px;
+}
+
+/* font */
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-22 {
+    font-size: 22px;
+}
+
+.fs-24 {
+    font-size: 24px;
+}
+
+.fs-26 {
+    font-size: 26px;
+}
+
+.fs-28 {
+    font-size: 28px;
+}
+
+.fs-32 {
+    font-size: 28px;
+}
+
+/* font weight */
+.fw-medium {
+    font-weight: 500 !important;
+}
+
+.fw-semibold {
+    font-weight: 600 !important;
+}
+
+/* height */
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.h-40 {
+    height: 40px;
+}
+
+.h-45 {
+    height: 45px;
+}
+
+/* width */
+.w-28 {
+    width: 28px;
+}
+
+.w-30 {
+    width: 30px;
+}
+
+.w-40 {
+    width: 40px;
+}
+
+/* rotation */
+.rotate-45 {
+    transform: rotate(45deg);
+}
+
+/* padding */
+.p-10 {
+    padding: 10px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+/* padding start */
+.ps-10 {
+    padding-left: 10px !important;
+}
+
+.ps-20 {
+    padding-left: 20px;
+}
+
+

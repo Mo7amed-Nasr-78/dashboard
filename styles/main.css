@@ -4,24 +4,7 @@
     font-family: "Roboto", system-ui;
 }
 
-:root {
-
-    /* ----Colors---- */
-    --white_color: #ffff;
-    --txt_color: rgba(100, 100, 100, 0.8); 
-    --txt_dark_color: #090B12; 
-
-    /* ----Radius---- */
-    --radius_10: 10px;
-    --radius_20: 20px;
-
-    /* ----Colors---- */
-    --trans_03: all 0.3s ease;
-    --trans_05: all 0.5s ease;
-}
-
 .sidebar {
-    min-height: 100vh;
     overflow-y: scroll;
     scrollbar-width: none;
 }
@@ -31,11 +14,11 @@
         position: absolute;
         top: 52px;
         left: -100%;
-        width: 100vw !important;
-        /* min-height: 50vh; */
+        height: 100vh;
+        width: 50vw !important;
         z-index: 50;
-        transition: var(--trans_05);
-        border-radius: var(--radius_10);
+        transition: all 0.5s ease;
+        border-radius: 10px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     }
 
@@ -44,22 +27,28 @@
     }
 }
 
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100vw !important;
+    }
+}
+
 .logo {
-    width: 120px;
+    width: 130px;
 }
 
-.nav-link {
-    color: var(--txt_color);
-    position: relative;
-}
-
-.nav-item .nav-link:hover,
-.nav-item.active .nav-link {
+.nav-link:hover,
+.nav-link:hover .title,
+.nav-link:hover .icon,
+.active .nav-link,
+.active .title,
+.active .icon {
+    color: #ff3a54 !important;
     background-color: #ffeeee;
 }
 
-.nav-item .nav-link:hover::before,
-.nav-item.active .nav-link::before {
+.nav-link:hover::before,
+.active .nav-link::before {
     content: "";
     position: absolute;
     top: 0;
@@ -67,95 +56,27 @@
     width: 3px;
     height: 100%;
     background: #ff3a54;
-    transform: var(--trans_05);
+    transform: all 0.5s ease;
 }
 
-.nav-link .link-title {
-    color: var(--txt_color);
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.nav-item:hover .link-title,
-.nav-item.active .link-title {
-    color: #ff3a54;
-}
-
-.nav-link .link-icon {
-    width: 28px;
-    color: var(--txt_color);
-    font-size: 24px;
-}
-
-.nav-item:hover .link-icon,
-.nav-item.active .link-icon {
-    color: #ff3a54;
-}
-
-.extend-icon {
-    color: var(--txt_color);
-    font-size: 30px;
-}
-
-.nav-item:hover .extend-icon,
-.nav-item.active .extend-icon {
-    color: #ff3a54;
-}
-
-.link-subtitle {
-    color: var(--txt_color);
-    font-size: 16px;
-    font-weight: 500;
-    transition: var(--trans_03);
-    padding-left: 20px;
-}
-
-.collapse .nav-link:hover .link-subtitle {
-    color: #ff3a54;
-    padding-left: 25px;
+.nav-link:hover .link-subtitle {
+    color: #ff3a54 !important;
+    padding-left: 25px !important;
 }
 
 .dropdown-toggle::after {
     display: none !important;
 } 
 
-.rotate-45 {
-    transform: rotate(45deg);
-}
-
-
 /* Content Styles */
-.content {
-    min-height: 100vh;
-    background-color: #FAF9F6;
-}
-
-.calender-icon,
-.sidebar-icon {
-    width: 40px;
-    height: 40px;
-    transition: var(--trans_03);
-}
-
-.calender-icon.active {
-    color: #ff3a54;
-}
-
 .sidebar-icon {
     display: none;
 }
 
 @media (max-width: 992px) {
     .sidebar-icon {
-        display: flex;
+        display: flex !important;
     }
-}
-
-.profile,
-.bell {
-    width: 40px;
-    height: 40px;
-    transition: var(--trans_03);
 }
 
 .bell::before {
@@ -175,25 +96,12 @@
 
 #langs_list,
 #stores_list {
-    height: 30px;
     width: 94px;
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--txt_color);
 }
 
 .dropdown-menu {
     min-width: 130px !important;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-    background-color: var(--white_color);
-}
-
-.dropdown-menu .dropdown-item {
-    color: var(--txt_dark_color);
-    font-size: 16px;
-    font-weight: 500;
-    padding-left: 10px;
-    transition: var(--trans_03);
 }
 
 .dropdown-menu .dropdown-item:hover {
@@ -204,7 +112,6 @@
 .custom-card {
     height: 14vh;
     min-height: 14vh;
-    border-radius: var(--radius_10);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     padding: 15px 20px;
 }
@@ -221,54 +128,9 @@
     }
 }
 
-.card-title {
-    color: #4E4E4E;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-@media (min-width: 1600px) {
-    .card-title {
-        font-size: 26px;
-    }
-}
-
 @media (max-width: 576px) {
     .card-title {
         font-size: 16px;
-    }
-}
-
-.card-title i {
-    font-size: 26px;
-    color: #18120F;
-}
-
-@media (max-width: 576px) {
-    .card-title i {
-        font-size: 24px;
-    }
-}
-
-.arrow {
-    transform: rotate(135deg);
-}
-
-.arrow-expend {
-    color: var(--txt_dark_color);
-    font-size: 28px;
-    transform: rotate(45deg);
-}
-
-.card-value {
-    color: var(--txt_dark_color);
-    font-size: 28px;
-    font-weight: 600;
-}
-
-@media (min-width: 1400px) {
-    .card-value {
-        font-size: 32px;
     }
 }
 
@@ -281,8 +143,6 @@
 .chart-card {
     height: 35vh;
     min-height: 30vh;
-    border-radius: var(--radius_10);
-    background-color: var(--white_color);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     padding: 10px 20px;
 }
@@ -302,22 +162,9 @@
     height: 90%;
 }
 
-.chart-title {
-    color: var(--txt_dark_color);
-    font-size: 18px;
-    font-weight: 500;
-}
-
-@media (min-width: 1400px) {
-    .chart-title {
-        font-size: 20px;
-    }
-}
-
 .bullet {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
+    width: 12px;
+    height: 12px;
 }
 
 .bullet.pen {
@@ -336,21 +183,10 @@
     background-color: #FFE1C2;
 }
 
-.tip-name {
-    color: black;
-    font-size: 18px;
-    font-weight: 400;
-}
-
 @media (max-width: 576px) {
     .tip-name {
         font-size: 16px;
     }
-}
-
-.payments-tip {
-    color: var(--txt_dark_color);
-    font-size: 16px;
 }
 
 @media (max-width: 576px) {
@@ -362,7 +198,6 @@
 .payments-tip span {
     width: 18px;
     height: 18px;
-    border-radius: 3px;
 }
 
 @media (max-width: 576px) {
@@ -380,16 +215,6 @@
     background-color: #725CFF;
 }
 
-.recommend-card {
-    padding: 10px;
-    border-radius: var(--radius_10);
-}
-
-.recommend-title {
-    color: var(--txt_dark_color);
-    font-size: 20px;
-    font-weight: 500;
-}
 
 @media (min-width: 1600px) {
     .recommend-title {
@@ -397,28 +222,11 @@
     }
 }
 
-.recommend-card a {
-    color: var(--txt_color);
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.recommend-card a:hover {
-    color: var(--txt_dark_color);
-}
-
-.recommend-card a > i {
-    font-size: 20px;
-}
-
-
 /* Calender Styles */
 .calender-window {
     width: 550px;
     z-index: 10;
-    border-radius: var(--radius_20);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    display: none;
 }
 
 @media (max-width: 768px) {
@@ -428,7 +236,7 @@
 }
 
 .calender.show .calender-window {
-display: flex;
+    display: flex !important;
 }
 
 @media (max-width: 768px) {
@@ -447,9 +255,6 @@ display: flex;
 .calender-window .nav-item {
     width: 100%;
     height: 35px;
-    color: var(--txt_dark_color);
-    font-size: 14px;
-    font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -471,12 +276,6 @@ display: flex;
     background-color: #FFEEEE;
 }
 
-.monthYearDisplay {
-    color: var(--txt_dark_color);
-    font-size: 20px;
-    font-weight: 500;
-}
-
 @media (max-width: 768px) {
     .monthYearDisplay {
         font-size: 18px;
@@ -492,10 +291,6 @@ display: flex;
 .weekdays {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    text-align: center;
-    color: var(--txt_color);
-    font-size: 16px;
-    font-weight: 400;
 }
 
 @media (max-width: 576px) {
@@ -519,8 +314,8 @@ display: flex;
     border-radius: 50%;
     font-size: 16px;
     font-weight: 400;
-    color: var(--txt_dark_color);
-    transition: var(--trans_05);
+    color: #090B12;
+    transition: 0.5s;
     user-select: none;
 }
 
@@ -541,31 +336,13 @@ display: flex;
 
 .day-of-month.current-day,
 .day-of-month:hover {
-    color: var(--white_color);
+    color: white;
     background: #ff3a54;
-}
-
-.calender-window .btn {
-    transition: var(--trans_05);
-}
-
-.calender-window .btn:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-.calender-window .btn:hover {
-    color: #ff3a54;
 }
 
 .calender-btn {
     width: 100px;
     height: 30px;
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--txt_dark_color);
-    border-radius: var(--radius_10);
-    transition: var(--trans_03);
 }
 
 @media (max-width: 768px) {
@@ -587,14 +364,13 @@ display: flex;
 }
 
 .calender-btn.apply {
-    color: var(--white_color);
+    color: white;
     background-color: #ff3a54;
 }
 
 .calender-btn.cancel {
     border: 2px solid #ff3a54;
 }
-
 
 /* Notifications Styles */
 .notifications-panel {
@@ -603,11 +379,10 @@ display: flex;
     right: -1000px;
     width: 430px;
     height: calc(100vh - 52px);
-    border-top-left-radius: var(--radius_20);
-    border-bottom-left-radius: var(--radius_20);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
     z-index: 30;
-    transition: var(--trans_05);
 }
 
 @media (max-width: 576px) {
@@ -624,55 +399,21 @@ display: flex;
     height: calc(50% - 20px);
 }
 
-.notifications-panel .notifications-title {
-    color: var(--txt_dark_color);
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.notifications-panel .notification {
-    color: var(--txt_dark_color);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-}
-
 .notifications-panel .notification-time,
 .notifications-panel .notification-history {
     width: 80px;
-    color: var(--txt_color);
-    font-size: 14px;
-    font-weight: 400;
 }
 
 .notifications-panel .notification-history {
     width: 100px;
 }
 
-.notifications-panel .notification-btn {
-    color: var(--txt_color);
-    font-size: 14px;
-    font-weight: 400;
+.notification-btn:hover,
+.notification-btn:hover > i {
+    color: #ff3a54 !important;
 }
 
-.notifications-panel .notification-btn > i {
-    font-size: 22px;
-}
-
-.notifications-panel .notification-btn:hover {
-    color: #ff3a54;
-}
-
-.notifications-panel .all-notifications {
-    color: var(--txt_dark_color);
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.notifications-panel .all-notifications > i {
-    font-size: 24px;
-}
-
-.notifications-panel .all-notifications:hover {
-    color: #ff3a54;
+.all-notifications:hover,
+.all-notifications:hover > i {
+    color: #ff3a54 !important;
 }
