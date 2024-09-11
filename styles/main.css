@@ -293,12 +293,12 @@
     }
 }
 
-.sales-chart {
+.sales-chart,
+.payments-chart {
     height: 80%;
 }
 
-.customers-chart,
-.payments-chart {
+.customers-chart {
     height: 90%;
 }
 
