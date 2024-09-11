@@ -4,12 +4,15 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=, initial-scale=1.0" />
         <title>Dashboard</title>
-        <!-- boxicons library -->
-        <link
+        <!-- fontawesome library -->
+        <!-- <link
             href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
             rel="stylesheet"
-        />
+        /> -->
+        <script src="https://kit.fontawesome.com/2753205223.js" crossorigin="anonymous"></script>
+        <!-- styles' sheets -->
         <link rel="stylesheet" href="./styles/main.css" />
+        <link rel="stylesheet" href="./styles/custom.css" />
         <!-- chart.js library -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <!-- bootstrap library -->
@@ -25,65 +28,63 @@
             <div class="row">
                 <!-- sidebar beginning -->
                 <div
-                    class="col-lg-2 col-md-3 pt-md-1 pb-0 pb-md-4 ps-0 ps-md-2 pe-0 d-flex flex-column bg-white sidebar"
+                class="col-lg-2 col-md-3 pt-1 px-2 d-flex flex-column bg-white sidebar"
                 >
-                    <div class="logo mb-2 d-none d-md-block">
+                    <div class="logo mb-4 d-none d-lg-block">
                         <img src="./assets/logo.svg" alt="logo" class="w-100 h-100"/>
                     </div>
                     <nav>
                         <ul class="nav d-flex flex-column gap-1">
-                            <li class="nav-item active">
+                            <li class="nav-item  active">
                                 <a
-                                    class="nav-link d-flex align-items-center gap-1 text-capitalize p-1"
+                                    class="nav-link h-45 d-flex align-items-center text-capitalize py-1 px-2 position-relative"
                                     href="#home"
                                 >
-                                    <div class="link-icon">
-                                        <i class="bx bx-home"></i>
+                                    <div class="icon light-color-2 w-30 fs-18">
+                                        <i class="fa-solid fa-house"></i>
                                     </div>
-                                    <span class="link-title">home</span>
+                                    <span class="title fw-medium fs-16 light-color-2">home</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a
-                                    class="menu_link nav-link d-flex align-items-center gap-1 text-capitalize p-1"
+                                    class="nav-link h-45 d-flex align-items-center text-capitalize py-1 px-2 position-relative"
                                     href="#"
                                 >
-                                    <div class="link-icon">
-                                        <i class="bx bx-store-alt"></i>
+                                    <div class="icon light-color-2 w-30 fs-18">
+                                        <i class="fa-solid fa-store"></i>
                                     </div>
-                                    <span class="link-title">stores</span>
+                                    <span class="title fw-medium fs-16 light-color-2">stores</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a
                                     href="#catalogSublinks"
-                                    class="nav-link d-flex align-items-center justify-content-between gap-1 text-capitalize p-1"
+                                    class="nav-link h-45 d-flex align-items-center justify-content-between gap-1 text-capitalize py-1 px-2 position-relative"
                                     role="button"
                                     data-bs-toggle="collapse"
                                     aria-expanded="false"
                                     aria-controls="catalogSublinks"
                                 >
                                     <div
-                                        class="d-flex align-items-center gap-1"
+                                        class="d-flex align-items-center"
                                     >
-                                        <div class="link-icon">
-                                            <i class="bx bx-grid-alt"></i>
+                                        <div class="icon light-color-2 w-30 fs-18">
+                                            <i class="fa-solid fa-book-open-reader"></i>
                                         </div>
-                                        <span class="link-title">catalog</span>
+                                        <span class="title fw-medium fs-16 light-color-2">catalog</span>
                                     </div>
-                                    <i
-                                        class="bx bx-chevron-down extend-icon"
-                                    ></i>
+                                    <i class="icon fa-solid fa-chevron-down light-color-2 fs-18"></i>
                                 </a>
                                 <div class="collapse" id="catalogSublinks">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a
                                                 href="#"
-                                                class="nav-link d-flex align-items-center"
+                                                class="nav-link d-flex align-items-center position-relative"
                                             >
                                                 <span
-                                                    class="link-subtitle text-capitalize"
+                                                    class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize"
                                                     >sublink</span
                                                 >
                                             </a>
@@ -91,32 +92,10 @@
                                         <li class="nav-item">
                                             <a
                                                 href="#"
-                                                class="nav-link d-flex align-items-center"
+                                                class="nav-link d-flex align-items-center position-relative"
                                             >
                                                 <span
-                                                    class="link-subtitle text-capitalize"
-                                                    >sublink</span
-                                                >
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a
-                                                href="#"
-                                                class="nav-link d-flex align-items-center"
-                                            >
-                                                <span
-                                                    class="link-subtitle text-capitalize"
-                                                    >sublink</span
-                                                >
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a
-                                                href="#"
-                                                class="nav-link d-flex align-items-center"
-                                            >
-                                                <span
-                                                    class="link-subtitle text-capitalize"
+                                                    class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize"
                                                     >sublink</span
                                                 >
                                             </a>
@@ -126,45 +105,43 @@
                             </li>
                             <li class="nav-item">
                                 <a
-                                    class="nav-link d-flex align-items-center gap-1 text-capitalize p-1"
+                                    class="nav-link h-45 d-flex align-items-center text-capitalize py-1 px-2 position-relative"
                                     href="#"
                                 >
-                                    <div class="link-icon">
-                                        <i class="bx bx-package"></i>
+                                    <div class="icon light-color-2 w-30 fs-18">
+                                        <i class="fa-solid fa-boxes-stacked"></i>
                                     </div>
-                                    <span class="link-title">products</span>
+                                    <span class="title link-title fw-medium fs-16 light-color-2">products</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a
                                     href="#ordersSublinks"
-                                    class="nav-link d-flex align-items-center justify-content-between gap-1 text-capitalize p-1"
+                                    class="nav-link h-45 d-flex align-items-center justify-content-between text-capitalize py-1 px-2 position-relative"
                                     role="button"
                                     data-bs-toggle="collapse"
                                     aria-expanded="false"
                                     aria-controls="ordersSublinks"
                                 >
                                     <div
-                                        class="d-flex align-items-center gap-1"
+                                        class="d-flex align-items-center"
                                     >
-                                        <div class="link-icon">
-                                            <i class="bx bx-shopping-bag"></i>
+                                        <div class="icon light-color-2 w-30 fs-18">
+                                            <i class="fa-solid fa-bag-shopping"></i>
                                         </div>
-                                        <span class="link-title">orders</span>
+                                        <span class="title fw-medium fs-16 light-color-2">orders</span>
                                     </div>
-                                    <i
-                                        class="bx bx-chevron-down extend-icon"
-                                    ></i>
+                                    <i class="icon fa-solid fa-chevron-down light-color-2 fs-18"></i>
                                 </a>
                                 <div class="collapse" id="ordersSublinks">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a
                                                 href="#"
-                                                class="nav-link d-flex align-items-center"
+                                                class="nav-link d-flex align-items-center position-relative"
                                             >
                                                 <span
-                                                    class="link-subtitle text-capitalize"
+                                                    class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize"
                                                     >sublink</span
                                                 >
                                             </a>
@@ -172,10 +149,10 @@
                                         <li class="nav-item">
                                             <a
                                                 href="#"
-                                                class="nav-link d-flex align-items-center"
+                                                class="nav-link d-flex align-items-center position-relative"
                                             >
                                                 <span
-                                                    class="link-subtitle text-capitalize"
+                                                    class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize"
                                                     >sublink</span
                                                 >
                                             </a>
@@ -185,46 +162,43 @@
                             </li>
                             <li class="nav-item position-relative">
                                 <a
-                                    class="nav-link d-flex align-items-center gap-1 text-capitalize p-1"
+                                    class="nav-link h-45 d-flex align-items-center text-capitalize py-1 px-2 position-relative"
                                     href="#"
                                 >
-                                    <div class="link-icon">
-                                        <i class="bx bx-code"></i>
+                                    <div class="icon light-color-2 w-30 fs-18">
+                                        <i class="fa-solid fa-code"></i>
                                     </div>
-                                    <span class="link-title">application</span>
+                                    <span class="title link-title fw-medium fs-16 light-color-2">application</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a
                                     href="#extensSublinks"
-                                    class="nav-link d-flex align-items-center justify-content-between gap-1 text-capitalize p-1"
+                                    class="nav-link h-45 d-flex align-items-center justify-content-between text-capitalize py-1 px-2 position-relative"
                                     data-bs-toggle="collapse"
                                     aria-expanded="false"
                                     aria-controls="extensSublinks"
                                 >
                                     <div
-                                        class="d-flex align-items-center gap-1"
+                                        class="d-flex align-items-center"
                                     >
-                                        <div class="link-icon">
-                                            <i class="bx bx-extension"></i>
+                                        <div class="icon light-color-2 w-30 fs-18">
+                                            <i class="fa-solid fa-puzzle-piece"></i>
                                         </div>
-                                        <span class="link-title"
-                                            >extensions</span
+                                        <span class="title fw-medium fs-16 light-color-2">extensions</span
                                         >
                                     </div>
-                                    <i
-                                        class="bx bx-chevron-down extend-icon"
-                                    ></i>
+                                    <i class="icon fa-solid fa-chevron-down light-color-2 fs-18"></i>
                                 </a>
                                 <div class="collapse" id="extensSublinks">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a
                                                 href="#"
-                                                class="nav-link d-flex align-items-center"
+                                                class="nav-link d-flex align-items-center position-relative"
                                             >
                                                 <span
-                                                    class="link-subtitle text-capitalize"
+                                                    class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize"
                                                     >sublink</span
                                                 >
                                             </a>
@@ -232,10 +206,10 @@
                                         <li class="nav-item">
                                             <a
                                                 href="#"
-                                                class="nav-link d-flex align-items-center"
+                                                class="nav-link d-flex align-items-center position-relative"
                                             >
                                                 <span
-                                                    class="link-subtitle text-capitalize"
+                                                    class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize"
                                                     >sublink</span
                                                 >
                                             </a>
@@ -246,33 +220,31 @@
                             <li class="nav-item">
                                 <a
                                     href="#settingsSublinks"
-                                    class="nav-link d-flex align-items-center justify-content-between gap-1 text-capitalize p-1"
+                                    class="nav-link h-45 d-flex align-items-center justify-content-between text-capitalize py-1 px-2 position-relative"
                                     role="button"
                                     data-bs-toggle="collapse"
                                     aria-expanded="false"
                                     aria-controls="settingsSublinks"
                                 >
                                     <div
-                                        class="d-flex align-items-center gap-1"
+                                        class="d-flex align-items-center"
                                     >
-                                        <div class="link-icon">
-                                            <i class="bx bx-cog"></i>
+                                        <div class="icon light-color-2 w-28 fs-18">
+                                            <i class="fa-solid fa-gear"></i>
                                         </div>
-                                        <span class="link-title">settings</span>
+                                        <span class="title fw-medium fs-16 light-color-2">settings</span>
                                     </div>
-                                    <i
-                                        class="bx bx-chevron-down extend-icon"
-                                    ></i>
+                                    <i class="icon fa-solid fa-chevron-down light-color-2 fs-18"></i>
                                 </a>
                                 <div class="collapse" id="settingsSublinks">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a
                                                 href="#"
-                                                class="nav-link d-flex align-items-center"
+                                                class="nav-link d-flex align-items-center position-relative"
                                             >
                                                 <span
-                                                    class="link-subtitle text-capitalize"
+                                                    class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize"
                                                     >sublink</span
                                                 >
                                             </a>
@@ -280,10 +252,10 @@
                                         <li class="nav-item">
                                             <a
                                                 href="#"
-                                                class="nav-link d-flex align-items-center"
+                                                class="nav-link d-flex align-items-center position-relative"
                                             >
                                                 <span
-                                                    class="link-subtitle text-capitalize"
+                                                    class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize"
                                                     >sublink</span
                                                 >
                                             </a>
@@ -294,33 +266,31 @@
                             <li class="nav-item">
                                 <a
                                     href="#supportSublinks"
-                                    class="nav-link d-flex align-items-center justify-content-between gap-1 text-capitalize p-1"
+                                    class="nav-link h-45 d-flex align-items-center justify-content-between text-capitalize position-relative py-1 px-2"
                                     role="button"
                                     data-bs-toggle="collapse"
                                     aria-expanded="false"
                                     aria-controls="supportSublinks"
                                 >
                                     <div
-                                        class="d-flex align-items-center gap-1"
+                                        class="d-flex align-items-center"
                                     >
-                                        <div class="link-icon">
-                                            <i class="bx bx-support"></i>
+                                        <div class="icon light-color-2 w-28 fs-18">
+                                            <i class="fa-solid fa-headset"></i>
                                         </div>
-                                        <span class="link-title">support</span>
+                                        <span class="title fw-medium fs-16 light-color-2">support</span>
                                     </div>
-                                    <i
-                                        class="bx bx-chevron-down extend-icon"
-                                    ></i>
+                                    <i class="icon fa-solid fa-chevron-down light-color-2 fs-18"></i>
                                 </a>
                                 <div class="collapse" id="supportSublinks">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a
                                                 href="#"
-                                                class="nav-link d-flex align-items-center"
+                                                class="nav-link d-flex align-items-center position-relative"
                                             >
                                                 <span
-                                                    class="link-subtitle text-capitalize"
+                                                    class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize"
                                                     >sublink</span
                                                 >
                                             </a>
@@ -328,10 +298,10 @@
                                         <li class="nav-item">
                                             <a
                                                 href="#"
-                                                class="nav-link d-flex align-items-center"
+                                                class="nav-link d-flex align-items-center position-relative"
                                             >
                                                 <span
-                                                    class="link-subtitle text-capitalize"
+                                                    class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize"
                                                     >sublink</span
                                                 >
                                             </a>
@@ -341,13 +311,13 @@
                             </li>
                             <li class="nav-item">
                                 <a
-                                    class="nav-link d-flex align-items-center gap-1 text-capitalize p-1"
+                                    class="nav-link h-45 d-flex align-items-center text-capitalize py-1 px-2 position-relative"
                                     href="#"
                                 >
-                                    <div class="link-icon">
-                                        <i class="bx bx-log-out-circle"></i>
+                                    <div class="icon light-color-2 w-28 fs-18">
+                                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
                                     </div>
-                                    <span class="link-title">logout</span>
+                                    <span class="title fw-medium fs-16 light-color-2">logout</span>
                                 </a>
                             </li>
                         </ul>
@@ -356,65 +326,72 @@
                 <!-- sidebar end -->
 
                 <!-- main content -->
-                <div class="col-12 col-lg-10 pb-2 content">
+                <div class="col-12 col-lg-10  pb-2 bg-vista-white min-h-screen content">
                     <nav class="navbar py-1 px-0 position-relative">
 
                         <div
                             class="d-flex align-items-center justify-content-center gap-2"
                         >
                             <div
-                                class="sidebar-icon align-items-center justify-content-center bg-white rounded-circle"
+                                class="sidebar-icon w-40 h-40 align-items-center justify-content-center bg-white rounded-circle"
                                 role="button"
                             >
-                                <i class="bx bx-menu-alt-left"></i>
+                            <i class="fa-solid fa-bars-staggered fs-18"></i>
                             </div>
 
                             <div class="calender position-relative">
                                 <div
-                                    class="calender-icon d-flex align-items-center justify-content-center bg-white rounded-circle"
+                                    class="calender-icon w-40 h-40 d-flex align-items-center justify-content-center bg-white rounded-circle"
                                     role="button"
                                 >
-                                    <i class="bx bx-calendar"></i>
+                                    <i class="fa-solid fa-calendar-days fs-18"></i>
                                 </div>
                                 <div
-                                    class="calender-window position-absolute p-3 bg-white"
+                                    class="calender-window position-absolute bg-white p-20 radius-10 d-none"
                                 >
                                     <div class="row gx-1">
                                         <div class="col-3">
                                             <ul class="nav w-100">
                                                 <li
-                                                    class="nav-item d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
                                                     id="today"
+                                                    role="button"
                                                 >
                                                     today
                                                 </li>
                                                 <li
-                                                    class="nav-item d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    role="button"
                                                 >
                                                     Yesterday
                                                 </li>
                                                 <li
-                                                    class="nav-item d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    role="button"
                                                 >
                                                     Last 7 days
                                                 </li>
                                                 <li
-                                                    class="nav-item d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    role="button"
                                                 >
                                                     Last 30 days
                                                 </li>
                                                 <li
-                                                    class="nav-item d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    role="button"
                                                 >
                                                     Last 90 days
                                                 </li>
                                                 <li
-                                                    class="nav-item d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    role="button"
                                                 >
                                                     Last month
                                                 </li>
                                                 <li
-                                                    class="nav-item d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    role="button"
                                                 >
                                                     Last Year
                                                 </li>
@@ -426,7 +403,7 @@
                                                     class="d-flex align-items-center justify-content-start gap-1 mb-1"
                                                 >
                                                     <h1
-                                                        class="monthYearDisplay m-0"
+                                                        class="monthYearDisplay m-0 fs-20 fw-medium dark-color"
                                                     >
                                                         February 2024
                                                     </h1>
@@ -449,7 +426,7 @@
                                                         </button>
                                                     </div>
                                                 </div>
-                                                <div class="weekdays">
+                                                <div class="weekdays fs-16 text-center fw-normal">
                                                     <div>Sun</div>
                                                     <div>Mon</div>
                                                     <div>Tue</div>
@@ -466,12 +443,12 @@
                                                     class="d-flex align-items-center justify-content-end gap-2 mt-1 mt-md-0"
                                                 >
                                                     <button
-                                                        class="calender-btn apply text-capitalize d-flex align-items-center justify-content-center border-0"
+                                                        class="calender-btn apply fs-16 w-normal text-white radius-10 text-capitalize d-flex align-items-center justify-content-center border-0 transition-03"
                                                     >
                                                         apply
                                                     </button>
                                                     <button
-                                                        class="calender-btn cancel text-capitalize d-flex align-items-center justify-content-center bg-transparent"
+                                                        class="calender-btn cancel fs-16 w-normal dark-color radius-10 text-capitalize d-flex align-items-center justify-content-center bg-transparent transition-03"
                                                     >
                                                         cancel
                                                     </button>
@@ -488,23 +465,23 @@
                         >
                             <div class="dropdown d-none d-lg-block">
                                 <button
-                                    class="d-flex align-items-center justify-content-center text-capitalize dropdown-toggle border-0 bg-transparent"
+                                    class="fs-16 fw-medium light-color d-flex align-items-center justify-content-center text-capitalize dropdown-toggle border-0 bg-transparent"
                                     type="button"
                                     id="langs_list"
                                     data-bs-toggle="dropdown"
                                     aria-expanded="false"
                                 >
                                     english
-                                    <i class="bx bx-chevron-down"></i>
+                                    <i class="fa-solid fa-chevron-down ms-1"></i>
                                 </button>
                                 <ul
-                                    class="dropdown-menu p-0"
+                                    class="dropdown-menu bg-white p-0"
                                     aria-labelledby="langs_list"
                                 >
                                     <li>
                                         <a
                                             href="#"
-                                            class="dropdown-item text-capitalize d-flex align-items-center"
+                                            class="dropdown-item dark-color ps-10 fw-medium fs-16 text-capitalize d-flex align-items-center"
                                             >arabic</a
                                         >
                                     </li>
@@ -513,37 +490,37 @@
 
                             <div class="dropdown d-none d-lg-block">
                                 <button
-                                    class="d-flex align-items-center justify-content-center text-capitalize dropdown-toggle border-0 bg-transparent"
+                                    class="fs-16 fw-medium light-color d-flex align-items-center justify-content-center text-capitalize dropdown-toggle border-0 bg-transparent"
                                     type="button"
                                     id="stores_list"
                                     data-bs-toggle="dropdown"
                                     aria-expanded="false"
                                 >
                                     all stores
-                                    <i class="bx bx-chevron-down"></i>
+                                    <i class="fa-solid fa-chevron-down ms-1"></i>
                                 </button>
                                 <ul
-                                    class="dropdown-menu p-0"
+                                    class="dropdown-menu bg-white p-0"
                                     aria-labelledby="langs_list"
                                 >
                                     <li>
                                         <a
                                             href="#"
-                                            class="dropdown-item text-capitalize d-flex align-items-center"
+                                            class="dropdown-item dark-color ps-10 fw-medium fs-16 text-capitalize d-flex align-items-center"
                                             >store 1</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
-                                            class="dropdown-item text-capitalize d-flex align-items-center"
+                                            class="dropdown-item dark-color ps-10 fw-medium fs-16 text-capitalize d-flex align-items-center"
                                             >store 2</a
                                         >
                                     </li>
                                     <li>
                                         <a
                                             href="#"
-                                            class="dropdown-item text-capitalize d-flex align-items-center"
+                                            class="dropdown-item dark-color ps-10 fw-medium fs-16 text-capitalize d-flex align-items-center"
                                             >store 3</a
                                         >
                                     </li>
@@ -551,22 +528,22 @@
                             </div>
 
                             <div
-                                class="bell d-flex align-items-center justify-content-center position-relative rounded-circle bg-white"
+                                class="bell w-40 h-40 d-flex align-items-center justify-content-center position-relative rounded-circle bg-white"
                                 role="button"
                             >
                                 <img src="./assets/bell.svg" alt="icon"/>
                             </div>
 
-                            <div class="profile rounded-circle" role="button">
+                            <div class="profile w-40 h-40 rounded-circle" role="button">
                                 <img src="./assets/profile.svg" alt="icon" />
                             </div>
                         </div>
 
                         <!-- notifications panel -->
-                        <div class="notifications-panel p-3 d-flex flex-column justify-content-between bg-white">
+                        <div class="notifications-panel p-3 d-flex flex-column justify-content-between bg-white transition-05">
                             <div class="notifications orders">
                                 <h2
-                                    class="notifications-title text-capitalize text-decoration-underline mb-1"
+                                    class="text-capitalize text-decoration-underline fs-16 fw-semibold dark-color mb-1"
                                 >
                                     order(<span class="notifications-count"
                                         >52</span
@@ -574,94 +551,86 @@
                                 </h2>
                                 <ul class="nav gap-1 mb-1">
                                     <li class="nav-item">
-                                        <h3 class="notification">
+                                        <h3 class="fs-16 fw-normal dark-color m-0">
                                             Order completed 1020
                                         </h3>
                                         <div
                                             class="d-flex align-items-center justify-content-start gap-1"
                                         >
-                                            <p class="notification-time text-capitalize m-0">
+                                            <p class="notification-time fs-14 fw-normal light-color text-capitalize m-0">
                                                 1 hour
                                             </p>
-                                            <p class="notification-history text-capitalize m-0">
+                                            <p class="notification-history fs-14 fw-normal light-color text-capitalize m-0">
                                                 jan 12, 2024
                                             </p>
                                             <button
-                                                class="notification-btn d-flex align-items-center justify-content-center border-0 bg-transparent text-capitalize"
+                                                class="notification-btn fs-14 fw-normal light-color d-flex align-items-center justify-content-center border-0 bg-transparent text-capitalize"
                                             >
                                                 view details
-                                                <i
-                                                    class="bx bx-up-arrow-alt rotate-45"
-                                                ></i>
+                                                <i class="fa-solid fa-arrow-up rotate-45 light-color fs-14 ms-1"></i>
                                             </button>
                                         </div>
                                     </li>
                                     <li class="nav-item">
-                                        <h3 class="notification">
+                                        <h3 class="fs-16 fw-normal dark-color m-0">
                                             Order cancelled 1028
                                         </h3>
                                         <div
                                             class="d-flex align-items-center justify-content-start gap-1"
                                         >
-                                            <p class="notification-time text-capitalize m-0">
+                                            <p class="notification-time fs-14 fw-normal light-color text-capitalize m-0">
                                                 today
                                             </p>
-                                            <p class="notification-history text-capitalize m-0">
+                                            <p class="notification-history fs-14 fw-normal light-color text-capitalize m-0">
                                                 jan 12, 2024
                                             </p>
                                             <button
-                                                class="notification-btn d-flex align-items-center justify-content-center border-0 bg-transparent text-capitalize"
+                                                class="notification-btn fs-14 fw-normal light-color d-flex align-items-center justify-content-center border-0 bg-transparent text-capitalize"
                                             >
                                                 view details
-                                                <i
-                                                    class="bx bx-up-arrow-alt rotate-45"
-                                                ></i>
+                                                <i class="fa-solid fa-arrow-up rotate-45 light-color fs-14 ms-1"></i>
                                             </button>
                                         </div>
                                     </li>
                                     <li class="nav-item">
-                                        <h3 class="notification">
+                                        <h3 class="fs-16 fw-normal dark-color m-0">
                                             Order cancelled 1029
                                         </h3>
                                         <div
                                             class="d-flex align-items-center justify-content-start gap-1"
                                         >
-                                            <p class="notification-time text-capitalize m-0">
+                                            <p class="notification-time fs-14 fw-normal light-color text-capitalize m-0">
                                                 yesterday
                                             </p>
-                                            <p class="notification-history text-capitalize m-0">
+                                            <p class="notification-history fs-14 fw-normal light-color text-capitalize m-0">
                                                 jan 12, 2024
                                             </p>
                                             <button
-                                                class="notification-btn d-flex align-items-center justify-content-center border-0 bg-transparent text-capitalize"
+                                                class="notification-btn fs-14 fw-normal light-color d-flex align-items-center justify-content-center border-0 bg-transparent text-capitalize"
                                             >
                                                 view details
-                                                <i
-                                                    class="bx bx-up-arrow-alt rotate-45"
-                                                ></i>
+                                                <i class="fa-solid fa-arrow-up rotate-45 light-color fs-14 ms-1"></i>
                                             </button>
                                         </div>
                                     </li>
                                     <li class="nav-item">
-                                        <h3 class="notification">
+                                        <h3 class="fs-16 fw-normal dark-color m-0">
                                             Order cancelled 1029
                                         </h3>
                                         <div
                                             class="d-flex align-items-center justify-content-start gap-1"
                                         >
-                                            <p class="notification-time text-capitalize m-0">
+                                            <p class="notification-time fs-14 fw-normal light-color text-capitalize m-0">
                                                 sunday
                                             </p>
-                                            <p class="notification-history text-capitalize m-0">
+                                            <p class="notification-history fs-14 fw-normal light-color text-capitalize m-0">
                                                 jan 12, 2024
                                             </p>
                                             <button
-                                                class="notification-btn d-flex align-items-center justify-content-center border-0 bg-transparent text-capitalize"
+                                                class="notification-btn fs-14 fw-normal light-color d-flex align-items-center justify-content-center border-0 bg-transparent text-capitalize"
                                             >
                                                 view details
-                                                <i
-                                                    class="bx bx-up-arrow-alt rotate-45"
-                                                ></i>
+                                                <i class="fa-solid fa-arrow-up rotate-45 light-color fs-14 ms-1"></i>
                                             </button>
                                         </div>
                                     </li>
@@ -669,7 +638,7 @@
                             </div>
                             <div class="notifications general">
                                 <h2
-                                    class="notifications-title text-capitalize text-decoration-underline mb-1"
+                                    class="text-capitalize text-decoration-underline fs-16 fw-semibold dark-color mb-1"
                                 >
                                     general notifications(<span
                                         class="notifications-count"
@@ -678,7 +647,7 @@
                                 </h2>
                                 <ul class="nav gap-1">
                                     <li class="nav-item">
-                                        <h3 class="notification">
+                                        <h3 class="fs-16 fw-normal dark-color m-0">
                                             Your account has been accessed from
                                             a new device: Desktop-win10-chrome
                                             128.0-66.85.73.110-US.
@@ -686,24 +655,22 @@
                                         <div
                                             class="d-flex align-items-center justify-content-start gap-1"
                                         >
-                                            <p class="notification-time text-capitalize m-0">
+                                            <p class="notification-time fs-14 fw-normal light-color text-capitalize m-0">
                                                 1 hour
                                             </p>
-                                            <p class="notification-history text-capitalize m-0">
+                                            <p class="notification-history fs-14 fw-normal light-color text-capitalize m-0">
                                                 jan 12, 2024
                                             </p>
                                             <button
-                                                class="notification-btn d-flex align-items-center justify-content-center border-0 bg-transparent text-capitalize"
+                                                class="notification-btn fs-14 fw-normal light-color d-flex align-items-center justify-content-center border-0 bg-transparent text-capitalize"
                                             >
                                                 view details
-                                                <i
-                                                    class="bx bx-up-arrow-alt rotate-45"
-                                                ></i>
+                                                <i class="fa-solid fa-arrow-up rotate-45 light-color fs-14 ms-1"></i>
                                             </button>
                                         </div>
                                     </li>
                                     <li class="nav-item">
-                                        <h3 class="notification">
+                                        <h3 class="fs-16 fw-normal dark-color m-0">
                                             Your account has been accessed from
                                             new device: Desktop - Win10 - Chrome
                                             128.0 - 185.95.207.85 -IQ
@@ -711,29 +678,27 @@
                                         <div
                                             class="d-flex align-items-center justify-content-start gap-1"
                                         >
-                                            <p class="notification-time text-capitalize m-0">
+                                            <p class="notification-time fs-14 fw-normal light-color text-capitalize m-0">
                                                 today
                                             </p>
-                                            <p class="notification-history text-capitalize m-0">
+                                            <p class="notification-history fs-14 fw-normal light-color text-capitalize m-0">
                                                 jan 12, 2024
                                             </p>
                                             <button
-                                                class="notification-btn d-flex align-items-center justify-content-center border-0 bg-transparent text-capitalize"
+                                                class="notification-btn fs-14 fw-normal light-color d-flex align-items-center justify-content-center border-0 bg-transparent text-capitalize"
                                             >
                                                 view details
-                                                <i
-                                                    class="bx bx-up-arrow-alt rotate-45"
-                                                ></i>
+                                                <i class="fa-solid fa-arrow-up rotate-45 light-color fs-14 ms-1"></i>
                                             </button>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                             <button
-                                class="all-notifications d-flex align-items-center justify-content-center text-capitalize ms-auto border-0 bg-transparent"
+                                class="all-notifications fs-16 fw-normal dark-color d-flex align-items-center justify-content-center text-capitalize ms-auto border-0 bg-transparent"
                             >
                                 view all notifications
-                                <i class="bx bx-up-arrow-alt rotate-45"></i>
+                                <i class="fa-solid fa-arrow-up rotate-45 dark-color fs-14 ms-1"></i>
                             </button>
                         </div>
 
@@ -741,7 +706,7 @@
 
                     <div class="row g-3 m-0">
                         <div class="col-6 col-md-3 ps-0 mt-1 mb-2 mb-md-0">
-                            <div class="custom-card bg-white">
+                            <div class="custom-card bg-white radius-10">
                                 <div
                                     class="card-body h-100 p-0 d-flex flex-column justify-content-between"
                                 >
@@ -749,21 +714,19 @@
                                         class="card-title d-flex align-items-center justify-content-between m-0"
                                     >
                                         <div
-                                            class="d-flex align-items-center justify-content-center gap-1 text-capitalize"
+                                            class="d-flex align-items-center justify-content-center fs-20 light-color fw-medium text-capitalize"
                                         >
-                                            <i
-                                                class="bx bxs-bar-chart-alt-2"
-                                            ></i>
+                                            <i class="fa-solid fa-chart-simple w-28 fs-20 dark-color-2"></i>
                                             sales
                                         </div>
-                                        <i class='bx bx-arrow-back arrow' ></i>
+                                        <i class="fa-solid fa-arrow-up rotate-45 dark-color-2 fs-6"></i>
                                     </div>
-                                    <h2 class="card-value m-0">$2,500</h2>
+                                    <h2 class="card-value m-0 dark-color fw-semibold fs-28">$2,500</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-md-3 pe-0 pe-md-2 mt-1">
-                            <div class="custom-card bg-white">
+                            <div class="custom-card bg-white radius-10">
                                 <div
                                     class="card-body h-100 p-0 d-flex flex-column justify-content-between"
                                 >
@@ -771,19 +734,19 @@
                                         class="card-title d-flex align-items-center justify-content-between m-0"
                                     >
                                         <div
-                                            class="d-flex align-items-center justify-content-center gap-1 text-capitalize"
+                                            class="d-flex align-items-center justify-content-center fs-20 light-color fw-medium text-capitalize"
                                         >
-                                            <i class="bx bx-shopping-bag"></i>
+                                            <i class="fa-solid fa-bag-shopping w-28 fs-20 dark-color-2"></i>
                                             orders
                                         </div>
-                                        <i class='bx bx-arrow-back arrow' ></i>
+                                        <i class="fa-solid fa-arrow-up rotate-45 dark-color-2 fs-6"></i>
                                     </div>
-                                    <h2 class="card-value m-0">30</h2>
+                                    <h2 class="card-value m-0 dark-color fw-semibold fs-28">30</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-md-3 ps-0 ps-md-2 mt-1">
-                            <div class="custom-card bg-white">
+                            <div class="custom-card bg-white radius-10">
                                 <div
                                     class="card-body h-100 p-0 d-flex flex-column justify-content-between"
                                 >
@@ -791,19 +754,19 @@
                                         class="card-title d-flex align-items-center justify-content-between m-0"
                                     >
                                         <div
-                                            class="d-flex align-items-center justify-content-center gap-1 text-capitalize"
+                                            class="d-flex align-items-center justify-content-center fs-20 light-color fw-medium text-capitalize"
                                         >
-                                            <i class="bx bx-package"></i>
+                                            <i class="fa-solid fa-boxes-stacked w-28 fs-20 dark-color-2"></i>
                                             products
                                         </div>
-                                        <i class='bx bx-arrow-back arrow' ></i>
+                                        <i class="fa-solid fa-arrow-up rotate-45 dark-color-2 fs-6"></i>
                                     </div>
-                                    <h2 class="card-value m-0">50</h2>
+                                    <h2 class="card-value m-0 dark-color fw-semibold fs-28">50</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6 col-md-3 mt-1 pe-0">
-                            <div class="custom-card bg-white">
+                            <div class="custom-card bg-white radius-10">
                                 <div
                                     class="card-body h-100 p-0 d-flex flex-column justify-content-between"
                                 >
@@ -811,14 +774,14 @@
                                         class="card-title d-flex align-items-center justify-content-between m-0"
                                     >
                                         <div
-                                            class="d-flex align-items-center justify-content-center gap-1 text-capitalize"
+                                            class="d-flex align-items-center justify-content-center fs-20 light-color fw-medium text-capitalize"
                                         >
-                                            <i class="bx bxs-group"></i>
+                                            <i class="fa-solid fa-user-group w-28 fs-20 dark-color-2"></i>
                                             customers
                                         </div>
-                                        <i class='bx bx-arrow-back arrow' ></i>
+                                        <i class="fa-solid fa-arrow-up rotate-45 dark-color-2 fs-6"></i>
                                     </div>
-                                    <h2 class="card-value m-0">30</h2>
+                                    <h2 class="card-value m-0 dark-color fw-semibold fs-28">30</h2>
                                 </div>
                             </div>
                         </div>
@@ -826,16 +789,14 @@
                     <div class="row g-3 m-0">
                         <div class="col-md-6 ps-0 pe-0 pe-md-2">
                             <div
-                                class="chart-card position-relative d-flex flex-column"
+                                class="chart-card position-relative d-flex flex-column bg-white radius-10"
                             >
-                                <div class="chart-title mb-1 text-capitalize">
+                                <div class="chart-title mb-1 text-capitalize ">
                                     <div
-                                        class="d-flex align-items-center justify-content-start"
+                                        class="dark-color fs-18 fw-semibold d-flex align-items-center justify-content-start"
                                     >
                                         sales
-                                        <i
-                                            class="bx bx-up-arrow-alt arrow-expend"
-                                        ></i>
+                                        <i class="fa-solid fa-arrow-up rotate-45 dark-color fs-18 ms-1"></i>
                                     </div>
                                 </div>
                                 <div
@@ -847,27 +808,27 @@
                                     <ul
                                         class="d-flex flex-column gap-2 gap-xl-3 align-items-start p-0 m-0 list-unstyled"
                                     >
-                                        <li class="tip-name text-capitalize">
+                                        <li class="fs-18 fw-normal dark-color tip-name text-capitalize">
                                             <span
-                                                class="bullet pen d-inline-block"
+                                                class="bullet pen d-inline-block rounded-circle me-1"
                                             ></span>
                                             Pending
                                         </li>
-                                        <li class="tip-name text-capitalize">
+                                        <li class="fs-18 fw-normal dark-color tip-name text-capitalize">
                                             <span
-                                                class="bullet in d-inline-block"
+                                                class="bullet in d-inline-block rounded-circle me-1"
                                             ></span>
                                             in progress
                                         </li>
-                                        <li class="tip-name text-capitalize">
+                                        <li class="fs-18 fw-normal dark-color tip-name text-capitalize">
                                             <span
-                                                class="bullet com d-inline-block"
+                                                class="bullet com d-inline-block rounded-circle me-1"
                                             ></span>
                                             completed
                                         </li>
-                                        <li class="tip-name text-capitalize">
+                                        <li class="fs-18 fw-normal dark-color tip-name text-capitalize">
                                             <span
-                                                class="bullet can d-inline-block"
+                                                class="bullet can d-inline-block rounded-circle me-1"
                                             ></span>
                                             cancelled
                                         </li>
@@ -876,15 +837,13 @@
                             </div>
                         </div>
                         <div class="col-md-6 pe-0 ps-0 ps-md-2">
-                            <div class="chart-card position-relative d-flex flex-column justify-content-between">
+                            <div class="chart-card position-relative d-flex flex-column justify-content-between bg-white radius-10">
                                 <div class="chart-title mb-1 text-capitalize">
                                     <div
-                                        class="d-flex align-items-center justify-content-start"
+                                        class="dark-color fs-18 fw-semibold d-flex align-items-center justify-content-start"
                                     >
                                         new customers
-                                        <i
-                                            class="bx bx-up-arrow-alt arrow-expend"
-                                        ></i>
+                                        <i class="fa-solid fa-arrow-up rotate-45 dark-color fs-18 ms-1"></i>
                                     </div>
                                 </div>
                                 <div class="customers-chart">
@@ -896,23 +855,21 @@
                     <div class="row g-3 m-0 pe-0">
                         <!-- payments chart -->
                         <div class="col-md-7 ps-0 pe-0 pe-md-2">
-                            <div class="chart-card w-100 h-100 position-relative d-flex flex-column justify-content-between">
+                            <div class="chart-card w-100 h-100 position-relative d-flex flex-column justify-content-between bg-white radius-10">
                                 <div class="chart-title mb-1 text-capitalize d-flex align-items-center justify-content-between">
                                     <div
-                                        class="d-flex align-items-center justify-content-start"
+                                        class="dark-color fs-18 fw-semibold d-flex align-items-center justify-content-start"
                                     >
                                         weekly payments
-                                        <i
-                                            class="bx bx-up-arrow-alt arrow-expend"
-                                        ></i>
+                                        <i class="fa-solid fa-arrow-up rotate-45 dark-color fs-18 ms-1"></i>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between gap-2 gap-xxl-3">
-                                        <div class="payments-tip d-flex align-items-center gap-1">
-                                            <span class="paid"></span>
+                                        <div class="fs-16 fw-semibold dark-color payments-tip d-flex align-items-center gap-1">
+                                            <span class="paid fw-semibold rounded-1"></span>
                                             paid
                                         </div>
-                                        <div class="payments-tip d-flex align-items-center gap-1">
-                                            <span class="unpaid"></span>
+                                        <div class="fs-16 fw-semibold dark-color payments-tip d-flex align-items-center gap-1">
+                                            <span class="unpaid fw-semibold rounded-1"></span>
                                             un-paid
                                         </div>
                                     </div>
@@ -929,20 +886,17 @@
                             >
                                 <div class="chart-title text-capitalize mb-3">
                                     <div
-                                        class="d-flex align-items-center justify-content-start"
+                                        class="dark-color fs-18 fw-semibold d-flex align-items-center justify-content-start"
                                     >
                                         recommend for you
-                                        <i
-                                            class="bx bx-up-arrow-alt arrow-expend"
-                                        ></i>
+                                        <i class="fa-solid fa-arrow-up rotate-45 dark-color fs-18 ms-1"></i>
                                     </div>
                                 </div>
                                 <div
                                     class="w-100 d-flex align-items-center justify-content-between"
-                                    style="height: 80%"
                                 >
                                     <div
-                                        class="recommend-card h-100 d-flex flex-column justify-content-between bg-white me-2"
+                                        class="recommend-card p-10 radius-10 h-100 d-flex flex-column justify-content-between bg-white me-2"
                                     >
                                         <div class="recommend-img w-100 h-100">
                                             <img
@@ -951,19 +905,19 @@
                                                 class="w-100 h-100"
                                             />
                                         </div>
-                                        <h3 class="recommend-title">
+                                        <h3 class="recommend-title fs-20 fw-medium dark-color mb-1">
                                             How to increase your sales....
                                         </h3>
                                         <a
                                             href="#"
-                                            class="ms-auto text-capitalize text-decoration-none d-flex align-items-center justify-content-center mt-2"
+                                            class="ms-auto text-capitalize fs-16 fw-medium light-color text-decoration-none d-flex align-items-center justify-content-center"
                                         >
                                             read more
-                                            <i class="bx bx-up-arrow-alt rotate-45"></i>
+                                            <i class="fa-solid fa-arrow-up rotate-45 light-color fs-16 ms-1"></i>
                                         </a>
                                     </div>
                                     <div
-                                        class="recommend-card h-100 d-flex flex-column justify-content-between bg-white ms-2"
+                                        class="recommend-card p-10 radius-10 h-100 d-flex flex-column justify-content-between bg-white ms-2"
                                     >
                                         <div class="recommend-img w-100 h-100">
                                             <img
@@ -972,15 +926,15 @@
                                                 class="w-100 h-100"
                                             />
                                         </div>
-                                        <h3 class="recommend-title">
+                                        <h3 class="recommend-title fs-20 fw-medium dark-color mb-1">
                                             How to increase your sales....
                                         </h3>
                                         <a
                                             href="#"
-                                            class="ms-auto text-capitalize text-decoration-none d-flex align-items-center justify-content-center mt-2"
+                                            class="ms-auto text-capitalize fs-16 fw-medium light-color text-decoration-none d-flex align-items-center justify-content-center"
                                         >
                                             read more
-                                            <i class="bx bx-up-arrow-alt rotate-45"></i>
+                                            <i class="fa-solid fa-arrow-up rotate-45 light-color fs-14 ms-1"></i>
                                         </a>
                                     </div>
                                 </div>
