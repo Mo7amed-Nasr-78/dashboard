@@ -118,7 +118,7 @@
 
 @media (min-width: 1600px) {
     .custom-card {
-        padding: 25px 35px;
+        padding: 25px 35px !important;
     }
 }
 
@@ -126,15 +126,11 @@
     .custom-card {
         height: 90px;
     }
-}
-
-@media (max-width: 576px) {
+    
     .card-title {
         font-size: 16px;
     }
-}
 
-@media (max-width: 576px) {
     .card-value {
         font-size: 22px;
     }
@@ -149,7 +145,7 @@
 
 @media (min-width: 1600px) {
     .chart-card {
-        padding: 20px 30px;
+        padding: 20px 30px !important;
     }
 }
 
@@ -187,9 +183,6 @@
     .tip-name {
         font-size: 16px;
     }
-}
-
-@media (max-width: 576px) {
     .payments-tip {
         font-size: 14px;
     }
@@ -217,7 +210,7 @@
 
 @media (min-width: 1600px) {
     .recommend-title {
-        font-size: 24px;
+        font-size: 24px !important;
     }
 }
 
