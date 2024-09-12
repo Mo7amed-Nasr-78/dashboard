@@ -119,6 +119,9 @@
 @media (min-width: 1600px) {
     .custom-card {
         padding: 25px 35px !important;
+      
+    .card-title {
+        font-size: 22px !important;
     }
 }
 
@@ -128,25 +131,15 @@
     }
 }
 
-@media (min-width: 1600px) {
-    .card-title {
-        font-size: 22px !important;
-    }
-}
-
 @media (max-width: 576px) {
     .card-title {
         font-size: 14px !important;
     }
-}
 
-@media (max-width: 576px) {
     .card-value {
         font-size: 20px !important;
     }
-}
-
-@media (max-width: 576px) {
+  
     .card-icon {
         font-size: 18px !important;
     }
@@ -165,12 +158,12 @@
     }
 }
 
-.sales-chart {
+.sales-chart,
+.payments-chart {
     height: 80%;
 }
 
-.customers-chart,
-.payments-chart {
+.customers-chart {
     height: 90%;
 }
 
@@ -197,11 +190,8 @@
 
 @media (max-width: 576px) {
     .tip-name {
-        font-size: 16px;
+        font-size: 16px !important;
     }
-}
-
-@media (max-width: 576px) {
     .payments-tip {
         font-size: 12px !important;
     }
@@ -251,7 +241,6 @@
     outline: none;
     box-shadow: none;
 }
-
 
 @media (max-width: 768px) {
     .calender-window {
@@ -434,10 +423,5 @@
 
 .notification-btn:hover,
 .notification-btn:hover > i {
-    color: #ff3a54 !important;
-}
-
-.all-notifications:hover,
-.all-notifications:hover > i {
     color: #ff3a54 !important;
 }
