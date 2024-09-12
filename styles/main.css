@@ -118,7 +118,7 @@
 
 @media (min-width: 1600px) {
     .custom-card {
-        padding: 25px 35px;
+        padding: 25px 35px !important;
     }
 }
 
@@ -128,15 +128,27 @@
     }
 }
 
+@media (min-width: 1600px) {
+    .card-title {
+        font-size: 22px !important;
+    }
+}
+
 @media (max-width: 576px) {
     .card-title {
-        font-size: 16px;
+        font-size: 14px !important;
     }
 }
 
 @media (max-width: 576px) {
     .card-value {
-        font-size: 22px;
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-icon {
+        font-size: 18px !important;
     }
 }
 
@@ -149,7 +161,7 @@
 
 @media (min-width: 1600px) {
     .chart-card {
-        padding: 20px 30px;
+        padding: 20px 30px !important;
     }
 }
 
@@ -191,7 +203,7 @@
 
 @media (max-width: 576px) {
     .payments-tip {
-        font-size: 14px;
+        font-size: 12px !important;
     }
 }
 
@@ -215,10 +227,15 @@
     background-color: #725CFF;
 }
 
-
 @media (min-width: 1600px) {
     .recommend-title {
-        font-size: 24px;
+        font-size: 24px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .recommend-title {
+        font-size: 20px !important;
     }
 }
 
@@ -228,6 +245,13 @@
     z-index: 10;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
+
+.btn.prevMonth:focus,
+.btn.nextMonth:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 
 @media (max-width: 768px) {
     .calender-window {
@@ -260,14 +284,14 @@
 @media (max-width: 768px) {
     .calender-window .nav-item {
         height: 26px;
-        font-size: 12px;
+        font-size: 12px !important;
     }
 }
 
 @media (max-width: 576px) {
     .calender-window .nav-item {
         height: 24px;
-        font-size: 10px;
+        font-size: 10px !important;
     }
 }
 
@@ -278,13 +302,13 @@
 
 @media (max-width: 768px) {
     .monthYearDisplay {
-        font-size: 18px;
+        font-size: 18px !important;
     }
 }
 
 @media (max-width: 576px) {
     .monthYearDisplay {
-        font-size: 16px;
+        font-size: 16px !important;
     }
 }
 
